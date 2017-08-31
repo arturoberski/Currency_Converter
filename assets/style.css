@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Shadows Into Light', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all .1s ease-in-out;
+}
+
+body {
+  background-color: rgb(111, 194, 178);
+  height: 100%;
+}
+
+section#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  animation-name: showContainer;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+/*** #invitation, #moneyGuy and buttons ***/
+
+#invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 60vw;
+  height: 100%;
+}
+
+#invitation p {
+  margin: 10px;
+}
+
+#invitation p:first-child {
+  font-size: 4.5rem;
+  transition: all 2s linear;
+}
+
+#invitation p:nth-child(2) {
+  font-size: 1.4rem;
+}
+
+#invitation p:nth-child(3) {
+  font-size: 1.8rem;
+}
+
+#startButton, #backButton, #showButton, #calculateButton, #anotherDateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  height: 60px;
+  width: 150px;
+  background-color: #b8e356;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#backButton, #showButton, #calculateButton, #anotherDateButton {
+  display: none;
+}
+
+#startButton:hover, #backButton:hover, #showButton:hover, #calculateButton:hover, #anotherDateButton:hover {
+  transform: scale(1.1);
+  filter: brightness(105%);
+}
+
+#moneyGuy {
+  background-image: url("112185-OOJK89-558.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 40vw;
+  height: 100vh;
+}
+
+
+/*** #options ***/
+
+#choose {
+  display: none;
+  align-self: center;
+  font-size: 3rem;
+}
+
+#options {
+  list-style: none;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation-name: showOptions;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#options .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  height: 200px;
+  width: 30%;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#options .option:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#options .option:nth-child(1) {
+  background-color: rgb(250, 100, 100);
+}
+
+#options .option:nth-child(2) {
+  background-color: rgb(47, 233, 112);
+}
+
+#options .option:nth-child(3) {
+  background-color: rgb(92, 171, 245);
+}
+
+#options .option:nth-child(4) {
+  background-color: rgb(219, 222, 80);
+}
+
+
+/*** #content ***/
+
+#content {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+#contentInfo {
+  font-size: 2rem;
+}
+
+label {
+  margin-bottom: 15px;
+}
+
+#list {
+  background-color: rgb(91, 174, 158);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+}
+
+.listElement {
+  width: 33%;
+  font-size: 1.4rem;
+}
+
+select, input {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+/*** @keyframes ***/
+
+@keyframes showContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showOptions {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/*** media ***/
+
+@media (max-width: 950px) {
+  #invitation {
+    width: 100vw;
+  }
+  #moneyGuy {
+    width: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  #options .option {
+    height: 120px;
+    width: 80%;
+  }
+  .listElement {
+    width: 45%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .listElement {
+    width: 95%;
+    font-size: 2rem;
+  }
+  select, input {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .listElement {
+    width: 95%;
+    font-size: 2.4rem;
+  }
+  #options .option {
+    height: auto;
+  }
+  select, input {
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+}
