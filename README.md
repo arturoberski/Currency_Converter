@@ -1,5 +1,7 @@
 # Currency_Converter
 
+Link do projektu: https://arturoberski.github.io/Currency_Converter/
+
 'Currency Converter' to aplikacja do sprawdzania kursu walut. Została stworzona przy użyciu HTML, CSS oraz biblioteki jQuery. Aplikacja pobiera dane z zewnętrznego JSON API (Fixer.io) i umożliwia wybór czterech opcji: 
 
 - pierwsza opcja pokazuje aktualne kursy walut dla wartości bazowej EUR,
