@@ -126,7 +126,7 @@ $(function () {
     resetElements();
     contentInfo.text('Content is loading...');
     $.ajax({
-      url: 'http://api.fixer.io/latest',
+      url: "https://api.fixer.io/latest",
       data: "GET",
       dataType: 'json'
     }).done(function (response) {
@@ -208,7 +208,7 @@ $(function () {
 
     showButton.on('click', function () {
       contentInfo.text('Content is loading...');
-      $.ajax({ url: 'http://api.fixer.io/' + $('#yearSelect').val() + '-' + $('#monthSelect').val() + '-' + $('#daySelect').val(), data: "GET", dataType: 'json' }).done(function (response) {
+      $.ajax({ url: 'https://api.fixer.io/' + $('#yearSelect').val() + '-' + $('#monthSelect').val() + '-' + $('#daySelect').val(), data: "GET", dataType: 'json' }).done(function (response) {
         insertContent(response);
       }).fail(function (error) {
         console.log('SecondOption error : ' + error);
@@ -248,7 +248,7 @@ $(function () {
     contentInfo.text('Content is loading...');
 
     $.ajax({
-      url: 'http://api.fixer.io/latest',
+      url: 'https://api.fixer.io/latest',
       data: "GET",
       dataType: 'json'
     }).done(function (response) {
@@ -284,7 +284,7 @@ $(function () {
     contentInfo.text('Content is loading...');
     list.css('display', 'none');
     $.ajax({
-      url: 'http://api.fixer.io/latest?base=' + $('#currencySelect').val(),
+      url: 'https://api.fixer.io/latest?base=' + $('#currencySelect').val(),
       data: "GET",
       dataType: 'json'
     }).done(function (response) {
@@ -313,7 +313,7 @@ $(function () {
     contentInfo.text('Content is loading...');
 
     $.ajax({
-      url: 'http://api.fixer.io/latest',
+      url: 'https://api.fixer.io/latest',
       data: "GET",
       dataType: 'json'
     }).done(function (response) {
@@ -366,7 +366,7 @@ $(function () {
     list.css('display', 'none');
     $(this).css('display', 'none');
     $.ajax({
-      url: 'http://api.fixer.io/latest?base=' + $('#firstCurrencySelect').val(),
+      url: 'https://api.fixer.io/latest?base=' + $('#firstCurrencySelect').val(),
       data: "GET",
       dataType: 'json'
     }).done(function (response) {
