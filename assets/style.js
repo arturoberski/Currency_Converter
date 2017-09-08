@@ -54,7 +54,7 @@ $(() => {
     resetElements();
     contentInfo.text('Content is loading...');
     $.ajax({
-      url: 'http://api.fixer.io/latest',
+      url: '//api.fixer.io/latest',
       data: "GET",
       dataType: 'json'
     }).done(response => {
@@ -136,7 +136,7 @@ $(() => {
 
     showButton.on('click', function() {
       contentInfo.text('Content is loading...');
-      $.ajax({url: `http://api.fixer.io/${$('#yearSelect').val()}-${$('#monthSelect').val()}-${$('#daySelect').val()}`, data: "GET", dataType: 'json'}).done(response => {
+      $.ajax({url: `//api.fixer.io/${$('#yearSelect').val()}-${$('#monthSelect').val()}-${$('#daySelect').val()}`, data: "GET", dataType: 'json'}).done(response => {
         insertContent(response);
       }).fail(error => {
         console.log(`SecondOption error : ${error}`);
@@ -176,7 +176,7 @@ $(() => {
     contentInfo.text('Content is loading...');
 
     $.ajax({
-      url: 'http://api.fixer.io/latest',
+      url: '//api.fixer.io/latest',
       data: "GET",
       dataType: 'json'
     }).done(response => {
@@ -212,7 +212,7 @@ $(() => {
     contentInfo.text('Content is loading...');
     list.css('display', 'none');
     $.ajax({
-      url: `http://api.fixer.io/latest?base=${$('#currencySelect').val()}`,
+      url: `//api.fixer.io/latest?base=${$('#currencySelect').val()}`,
       data: "GET",
       dataType: 'json'
     }).done(response => {
@@ -241,7 +241,7 @@ $(() => {
     contentInfo.text(`Content is loading...`);
 
     $.ajax({
-      url: 'http://api.fixer.io/latest',
+      url: '//api.fixer.io/latest',
       data: "GET",
       dataType: 'json'
     }).done(response => {
@@ -292,7 +292,7 @@ $(() => {
     list.css('display', 'none');
     $(this).css('display', 'none');
     $.ajax({
-      url: `http://api.fixer.io/latest?base=${$('#firstCurrencySelect').val()}`,
+      url: `//api.fixer.io/latest?base=${$('#firstCurrencySelect').val()}`,
       data: "GET",
       dataType: 'json'
     }).done(response => {
